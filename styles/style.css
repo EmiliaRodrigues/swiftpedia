@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Martel:wght@200;300;400;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+/* reset basico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+.titulo-sitio{
+    font-family: "Martel", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 4rem;
+    color: #07082B;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #7D6B5A;
+}
+/* Agrupa el título y subtítulo juntos */
+.header-texto{
+    display: flex;
+    flex-direction: column;
+}
+.subtitulo-sitio{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #07082B;
+}
+.menu-nav, .submenu{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #07082B;
+}
+.menu-nav{
+    margin-right: 10%;
+}   
+/* Menú principal en fila */
+.lista-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+}
+/* Cada item del menú */
+.item-nav {
+    position: relative;
+}
+/* Links del menú */
+.link-nav {
+    text-decoration: none;
+    color: inherit;
+}
+/* Submenú desplegable */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7D6B5A;
+    border: 1px solid #07082B;
+    list-style: none;
+    min-width: 200px;
+    z-index: 100;
+    padding: 5px 0;
+    display: none; /* Oculta el submenú por defecto */
+}
+/* Lo muestra cuando pasás el mouse por encima del li */
+.item-nav:hover .submenu {
+    display: block;
+}
+/* Submenú desplegable */
+.link-submenu {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 5px 15px;
+}
+.link-submenu:hover {
+    background-color: #BCBAAD;
+}
+/* HASTA ACA LAS COSAS DE HEADER */
+main{
+    background-color: #BCBAAD;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+/* imagen taylor corazon */
+.imagen-portada {
+    width: 63%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin-left: 18%;
+    margin-right: 20%;
+    margin-bottom: 4%;
+    border-radius: 8px;
+    padding: 0;
+}
+.subtitulo-pagina{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: #07082B;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+.imagen-chica, .imagen-grammy{
+    float: right;
+    width: 24%;
+    margin-left: 20px;
+    margin-right: 3%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+p{
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #07082B;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.ultimo-parrafo{
+    margin-bottom: 0;
+    margin-left: 2%;
+    margin-right: 2%;   
+}
+.lista-logros{
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #07082B;
+    margin-left: 4%;
+    margin-right: 2%;
+    list-style-type: '- ';
+}
+/* DISCOGRAFIA */
+.pagina-discografia h2{
+    text-align: center;
+    font-size: 3em;
+    color: #07082B;
+    margin-top: 1%;
+    margin-bottom: 6%;
+}
+.tapa-album{
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #07082B;
+    width: 100%;
+}
+.lista-canciones a{
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #07082B;
+} 
+.lista-canciones{
+    list-style-type: decimal;
+    flex: 0 0 220px;
+}
+.lista-canciones :hover{
+    text-decoration: underline;
+}
+summary {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    color: #07082B;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+summary:hover {
+    text-decoration: underline;
+}
+.pagina-discografia .container-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 2% 8% 2%;
+}
+.tapa-año-titulo{
+    flex: 0 0 250px;
+}
+.album-info{
+    flex: 1;
+    min-width: 0; /*Importante para texto largo */
+}
+details {
+    /* flex: 0 0 200px; */
+    margin-left: 50px;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+/* PAGINAS CANCIONES */
+.titulo-cancion{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #07082B;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.link-yt{
+    text-decoration: none;
+    color: #07082B;
+    margin-left: 2%;
+}
+.link-yt:hover{
+    text-decoration: underline;
+}
+.letra-cancion{
+    text-align: center;
+}
+.grid-albums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2%;
+}
+.grid-albums article {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 300px;
+}
+/* TAYLORS VERSION */
+.pagina-taylors-version h2{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    font-size: 3rem;
+    color: #07082B;
+    margin-top: 1%;
+    margin-bottom: 6%;
+}
+.imagen-masters {
+    float: right;
+    width: 35%;
+    margin-left: 20px;
+    margin-right: 3%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+} 
+small{
+    font-family: "Palanquin", sans-serif;
+}
+.fondo-card{
+    background-color:#939183;
+    display: flex;
+    flex-direction: column;
+}
+.fondo-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.title-size{
+    font-size: 2rem;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #07082B;
+    min-height: 100px;
+}
+.pagina-taylors-version .lista-canciones {
+    list-style-position: inside;
+    font-family: "Palanquin", sans-serif;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    scrollbar-color: #07082B rgba(255, 255, 255, 0.2);
+    scrollbar-width: thin;
+}
+.pagina-taylors-version .lista-canciones li {
+    margin-bottom: 0.4rem;
+    color: #07082B;
+    font-size: 0.9rem;
+}
+.pagina-taylors-version .lista-canciones a {
+    color: #07082B;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+ /* TOURS */
+.pagina-tour h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #07082B;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+/* MEDIA */
+.pagina-media h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #07082B;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.pagina-media .ultimo-p{
+    padding-bottom: 5%;
+}
+/* FOOTER */
+footer{
+    background-color: #7D6B5A;
+}
+.copy{
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.menu-footer{
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+.menu-footer .submenu {
+    top: auto;
+    bottom: 100%;
+    display: none !important;
+}
+.contact-form{
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #07082B;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.contact-form p {
+    margin-left: 0; 
+}
+.contact-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.contact-form label {
+    margin-bottom: 4px;
+}
+.contact-form textarea {
+    vertical-align: top;
+    resize: vertical;
+}
+input, textarea, button{
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #07082B;
+    background-color: #BCBAAD;
+}
+button{
+    padding: 0.5%;
+    border-radius: 10px;
+}
+button:active{
+    background-color: #7D6B5A;
+}
+footer h2{
+    margin-top: 2%;
+}
+body {
+    background-color: #7D6B5A;
+}
+/* tablet grande / pantalla chica */
+@media (min-width: 901px) and (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .titulo-sitio {
+        font-size: 4rem;
+    }
+
+    .subtitulo-sitio {
+        font-size: 1.5rem;
+        align-items: center;
+        text-align: center; 
+        padding-bottom: 10px;
+    }
+
+    .imagen-portada {
+        width: 80%;
+        justify-items: center;
+        height: 10%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4%;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .menu-nav {
+        margin-right: 2%;
+    }
+
+    .lista-nav {
+        gap: 15px;
+        font-size: 1.5rem;
+    }
+/* aca arrancaron los cambio */
+    .pagina-discografia .container-flex {
+        flex-direction: row;
+    }
+
+    .tapa-año-titulo {
+        flex: 0 0 230px;
+    }
+
+    details {
+        flex: 0 0 220px;
+    }
+
+    .album-info {
+        flex: 1;
+    }
+/* aca termina los cmabis */
+    .imagen-grammy,.imagen-chica{
+        width: 30%;
+    }
+
+    .menu-footer{
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .menu-footer .lista-nav {
+        justify-content: center;
+    }
+
+}
+@media  (min-width: 536px) and (max-width: 900px)  {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .titulo-sitio {
+        font-size: 3.5rem;
+        align-items: center;
+        text-align: center;  
+    }
+
+    .subtitulo-sitio {
+        font-size: 1.3rem;
+        align-items: center;
+        text-align: center; 
+    }
+
+    .menu-nav {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .lista-nav {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 12px;
+        font-size: 1.4rem;
+    }
+    /* asi no hace scrolleo lateral */
+    .item-nav:nth-child(4) .submenu, .item-nav:nth-child(5) .submenu {
+        left: auto;
+        right: 0;
+    }
+
+    .item-submenu{
+        font-size: 1.3rem;
+        margin-right: 2%;
+    }
+
+    .imagen-portada {
+        width: 90%;
+        justify-items: center;
+        height: 10%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4%;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .imagen-grammy,.imagen-chica{
+        width: 40%;
+    }
+    
+    .pagina-discografia .container-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .tapa-año-titulo {
+        flex: 0 0 100%;
+    }
+
+    details {
+        flex: 0 0 auto;  
+    }
+
+    .album-info {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+    .menu-footer{
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .menu-footer .lista-nav {
+        justify-content: center;
+    }
+
+    .tapa-album{
+        width: 30%;
+    }
+
+    .imagen-masters{
+        width: 50%;
+    }
+
+    .title-size{
+        min-height: auto;
+    }
+}  
+@media (max-width: 536px) {
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+        align-items: center;
+    }
+
+    .titulo-sitio {
+        font-size: 3rem;
+        text-align: center;  
+    }
+
+    .subtitulo-sitio {
+        font-size: 1.2rem;
+        text-align: center; 
+    }
+
+    .menu-nav {
+        margin-right: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .lista-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .link-nav {
+        font-size: 1.2rem;
+    }
+
+    .submenu {
+        position: absolute;
+        display: none;
+        background-color: #7D6B5A;
+        min-width: 200px;
+    }
+
+    .item-nav:hover .submenu {
+        display: block;
+    }
+
+    .link-submenu {
+        font-size: 1rem;
+        padding: 3px 10px;
+        color: #07082B;
+    }
+
+    .imagen-portada {
+        width: 90%;
+        height: 250px;
+        object-fit: cover;
+        margin: 0 auto 20px auto;
+        display: block;
+        padding: 0;
+    }
+    .imagen-masters,.imagen-chica,.imagen-grammy{
+        float: none;
+        width: 70%;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .pagina-discografia .container-flex {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .tapa-año-titulo {
+        flex: 0 0 100%;
+        width: 80%;
+    }
+
+    details {
+        flex: 0 0 100%;
+    }
+
+    .album-info {
+        flex: 0 0 100%;
+    }
+
+    .title-size{
+        min-height: auto;
+    }
+    .menu-footer{
+        margin-left: 0;
+        text-align: center;
+    }
+}
