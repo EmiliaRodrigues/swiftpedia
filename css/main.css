@@ -1,11 +1,215 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Martel:wght@200;300;400;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-*::selection {
-  background-color: black;
-  color: #7D6B5A;
+
+/* EXTEND para títulos-pag*/
+footer h2, main .subtitulo-pagina {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+  color: #07082B;
+}
+
+/* EXTEND para texto de párrafo */
+footer .contact-form, footer .contact-form input, footer .contact-form textarea, footer .contact-form button, footer .copy, main p, main .lista-logros {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #07082B;
+}
+
+/* MIXIN para margin responsive */
+/* MIXIN para dimensiones */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #7D6B5A;
+}
+header .header-texto {
+  display: flex;
+  flex-direction: column;
+}
+header .header-texto .titulo-sitio {
+  font-family: "Martel", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 4rem;
+  color: #07082B;
+}
+header .header-texto .subtitulo-sitio {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #07082B;
+}
+header .menu-nav {
+  margin-right: 10%;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #07082B;
+}
+header .menu-nav .lista-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+}
+header .menu-nav .lista-nav .item-nav {
+  position: relative;
+}
+header .menu-nav .lista-nav .item-nav .link-nav {
+  text-decoration: none;
+  color: inherit;
+}
+header .menu-nav .lista-nav .item-nav .submenu {
+  /* Submenú desplegable */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #7D6B5A;
+  border: 1px solid #07082B;
+  list-style: none;
+  min-width: 200px;
+  z-index: 100;
+  padding: 5px 0;
+  display: none; /* Oculta el submenú por defecto */
+}
+header .menu-nav .lista-nav .item-nav .submenu .link-submenu {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 5px 15px;
+}
+header .menu-nav .lista-nav .item-nav .submenu .link-submenu:hover {
+  background-color: #BCBAAD;
+}
+header .menu-nav .lista-nav .item-nav:hover .submenu {
+  display: block;
+}
+
+main {
+  background-color: #BCBAAD;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+main .imagen-portada {
+  width: 63%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin-left: 18%;
+  margin-right: 20%;
+  margin-bottom: 4%;
+  border-radius: 8px;
+}
+main .subtitulo-pagina {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+main p {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+main .lista-logros {
+  margin-left: 4%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: "- ";
+}
+main .imagen-chica, main .imagen-grammy {
+  float: right;
+  width: 24%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #7D6B5A;
+}
+footer h2 {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+footer .contact-form {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+footer .contact-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .contact-form label {
+  margin-bottom: 4px;
+}
+footer .contact-form input, footer .contact-form textarea, footer .contact-form button {
+  background-color: #BCBAAD;
+}
+footer .contact-form button {
+  padding: 0.5%;
+  border-radius: 10px;
+  margin-top: 2%;
+}
+footer .contact-form button:active {
+  background-color: #7D6B5A;
+}
+footer .menu-footer {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+footer .menu-footer .menu-nav {
+  display: flex;
+  justify-content: center;
+}
+footer .menu-footer .lista-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+}
+footer .menu-footer .submenu {
+  top: auto;
+  bottom: 100%;
+}
+footer .copy {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+body {
+  background-color: #7D6B5A;
 }
 
 /*# sourceMappingURL=main.css.map */

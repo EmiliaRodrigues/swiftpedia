@@ -1,1 +1,13 @@
-@use "./partials/reset";
+@use './partials/variables';
+@use './partials/reset';
+@use './partials/extends';
+
+@use './partials/header';
+
+@use './partials/main-content';
+
+@use './partials/footer';
+
+body{
+    background-color: variables.$colorSecundario;
+}

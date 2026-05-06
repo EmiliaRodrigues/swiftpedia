@@ -1,0 +1,84 @@
+@use './variables';
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: variables.$colorSecundario;
+
+    .header-texto {
+        display: flex;
+        flex-direction: column;
+
+        .titulo-sitio {
+            font-family: variables.$letraTitulos;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 4rem;
+            color: variables.$colorLetras;
+        }
+
+        .subtitulo-sitio {
+            font-family: variables.$letraSubTitulos;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: variables.$colorLetras;
+        }
+    }
+
+    .menu-nav {
+        margin-right: 10%;
+        font-family: variables.$letraSubTitulos;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.5rem;
+        color: variables.$colorLetras;
+
+        .lista-nav {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+
+            .item-nav {
+                position: relative;
+
+                .link-nav {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                .submenu {
+                    /* Submenú desplegable */
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: variables.$colorSecundario;
+                    border: 1px solid variables.$colorLetras;
+                    list-style: none;
+                    min-width: 200px;
+                    z-index: 100;
+                    padding: 5px 0;
+                    display: none; /* Oculta el submenú por defecto */
+
+                    .link-submenu {
+                        text-decoration: none;
+                        color: inherit;
+                        display: block;
+                        padding: 5px 15px;
+
+                        &:hover {
+                            background-color: variables.$colorPrincipal;
+                        }
+                    }
+                }
+
+                &:hover .submenu {
+                    display: block;
+                }
+            }
+        }
+    }
+}

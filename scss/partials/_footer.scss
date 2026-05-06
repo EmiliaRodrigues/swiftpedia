@@ -1,0 +1,68 @@
+@use './variables';
+@use './extends';
+
+footer{
+    background-color: variables.$colorSecundario;
+    h2 {
+        @extend %sub-titulo;
+        @include extends.margenes(2%,2%,2%,0);
+    }
+    .contact-form{
+        @extend %texto-parrafo;
+        @include extends.margenes(2%,2%,0,2%);
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            margin-bottom: 4px;
+        }
+
+        input, textarea, button{
+            @extend %texto-parrafo;
+            background-color: variables.$colorPrincipal;
+        }
+
+        button{
+            padding: 0.5%;
+            border-radius: 10px;
+            margin-top: 2%;
+
+            &:active{
+                background-color: variables.$colorSecundario;
+            }
+        }
+    }
+
+    .menu-footer {
+        text-align: center;
+        @include extends.margenes(0,0,5%,0);
+
+        .menu-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .lista-nav {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .submenu {
+            top: auto;
+            bottom: 100%;
+        }
+    }
+
+    .copy{
+        text-align: center;
+        @extend %texto-parrafo;
+        @include extends.margenes(0,0,5%,5%);
+    }
+}
