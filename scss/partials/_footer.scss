@@ -1,8 +1,12 @@
 @use './variables';
 @use './extends';
+@use './header';
 
 footer{
     background-color: variables.$colorSecundario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
         @extend %sub-titulo;
         @include extends.margenes(2%,2%,2%,0);
@@ -38,31 +42,38 @@ footer{
     }
 
     .menu-footer {
-        text-align: center;
-        @include extends.margenes(0,0,5%,0);
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        
+        .menu-nav{
+            @extend %texto-menu;
 
-        .menu-nav {
-            display: flex;
-            justify-content: center;
-        }
+            .lista-nav {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                gap: 20px;
 
-        .lista-nav {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            gap: 20px;
-            justify-content: center;
-        }
+                .item-nav {
+                    position: relative;
+                    white-space: nowrap;  
+                }
 
-        .submenu {
-            top: auto;
-            bottom: 100%;
+                .link-nav {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                .submenu {
+                    display: none !important;
+                }
+            }
         }
     }
 
     .copy{
         text-align: center;
         @extend %texto-parrafo;
-        @include extends.margenes(0,0,5%,5%);
     }
 }

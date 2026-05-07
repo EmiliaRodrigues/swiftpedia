@@ -7,19 +7,38 @@
 }
 
 /* EXTEND para títulos-pag*/
-footer h2, main .subtitulo-pagina {
+main .titulo-pagina, main .titulo-cancion {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #07082B;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+footer h2, .container .fondo-card .card-body .title-size, main .subtitulo-pagina {
   font-family: "Abhaya Libre", serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #07082B;
 }
 
 /* EXTEND para texto de párrafo */
-footer .contact-form, footer .contact-form input, footer .contact-form textarea, footer .contact-form button, footer .copy, main p, main .lista-logros {
+footer .contact-form, footer .contact-form input, footer .contact-form textarea, footer .contact-form button, footer .copy, .pagina-discografia .container-flex details .lista-canciones a, main p, main .lista-logros {
   font-family: "Palanquin", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #07082B;
+}
+
+footer .menu-footer .menu-nav, header .menu-nav {
+  margin-right: 10%;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
   color: #07082B;
 }
 
@@ -44,14 +63,6 @@ header .header-texto .titulo-sitio {
   color: #07082B;
 }
 header .header-texto .subtitulo-sitio {
-  font-family: "Abhaya Libre", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #07082B;
-}
-header .menu-nav {
-  margin-right: 10%;
   font-family: "Abhaya Libre", serif;
   font-weight: 700;
   font-style: normal;
@@ -112,6 +123,7 @@ main .imagen-portada {
   display: block;
   margin-left: 18%;
   margin-right: 20%;
+  margin-top: 0;
   margin-bottom: 4%;
   border-radius: 8px;
 }
@@ -143,9 +155,120 @@ main .imagen-chica, main .imagen-grammy {
   margin-bottom: 0;
   border-radius: 8px;
 }
+main .imagen-masters {
+  float: right;
+  width: 35%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 8px;
+}
+main .link-yt {
+  text-decoration: none;
+  color: #07082B;
+  margin-left: 2%;
+}
+main .link-yt:hover {
+  text-decoration: underline;
+}
+main .letra-cancion {
+  text-align: center;
+}
+
+.pagina-discografia .container-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 2% 8% 2%;
+}
+.pagina-discografia .container-flex .tapa-album {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #07082B;
+  width: 100%;
+}
+.pagina-discografia .container-flex details {
+  /* flex: 0 0 200px; */
+  margin-left: 50px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+.pagina-discografia .container-flex details summary {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  color: #07082B;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.pagina-discografia .container-flex details summary:hover {
+  text-decoration: underline;
+}
+.pagina-discografia .container-flex details .lista-canciones {
+  list-style-type: decimal;
+  flex: 0 0 220px;
+}
+.pagina-discografia .container-flex details .lista-canciones a {
+  text-decoration: none;
+}
+.pagina-discografia .container-flex details .lista-canciones a:hover {
+  text-decoration: underline;
+}
+.pagina-discografia .container-flex .tapa-año-titulo {
+  flex: 0 0 250px;
+}
+.pagina-discografia .container-flex .album-info {
+  flex: 1;
+  min-width: 0; /*Importante para texto largo */
+}
+
+.container .fondo-card {
+  background-color: #7D6B5A;
+  display: flex;
+  flex-direction: column;
+}
+.container .fondo-card .card-body {
+  flex-grow: 1;
+}
+.container .fondo-card .card-body .title-size {
+  font-size: 2rem;
+  min-height: 100px;
+}
+.container .fondo-card .card-body small {
+  font-family: "Palanquin", sans-serif;
+}
+.container .fondo-card .card-body .lista-canciones {
+  list-style-position: inside;
+  font-family: "Palanquin", sans-serif;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  scrollbar-color: #07082B rgba(255, 255, 255, 0.2);
+  scrollbar-width: thin;
+}
+.container .fondo-card .card-body .lista-canciones li {
+  margin-bottom: 0.4rem;
+  color: #07082B;
+  font-size: 0.9rem;
+}
+.container .fondo-card .card-body .lista-canciones a {
+  color: #07082B;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
 footer {
   background-color: #7D6B5A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer h2 {
   margin-left: 2%;
@@ -179,33 +302,29 @@ footer .contact-form button:active {
   background-color: #7D6B5A;
 }
 footer .menu-footer {
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 5%;
-  margin-bottom: 0;
-}
-footer .menu-footer .menu-nav {
-  display: flex;
+  align-items: center;
   justify-content: center;
+  margin-top: 5%;
 }
-footer .menu-footer .lista-nav {
+footer .menu-footer .menu-nav .lista-nav {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 20px;
-  justify-content: center;
 }
-footer .menu-footer .submenu {
-  top: auto;
-  bottom: 100%;
+footer .menu-footer .menu-nav .lista-nav .item-nav {
+  position: relative;
+  white-space: nowrap;
+}
+footer .menu-footer .menu-nav .lista-nav .link-nav {
+  text-decoration: none;
+  color: inherit;
+}
+footer .menu-footer .menu-nav .lista-nav .submenu {
+  display: none !important;
 }
 footer .copy {
   text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 body {

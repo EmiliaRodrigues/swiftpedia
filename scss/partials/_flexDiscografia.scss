@@ -1,0 +1,58 @@
+@use './variables';
+@use './extends';
+.pagina-discografia .container-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 2% 8% 2%;
+
+    .tapa-album{
+        display: block;
+        border-radius: 3px;
+        border: 1px solid variables.$colorLetras;
+        width: 100%;
+    }
+
+    details {
+        /* flex: 0 0 200px; */
+        margin-left: 50px;
+        align-self: flex-start;
+        margin-top: 20px;
+
+        summary {
+            font-family: variables.$letraParrafos;
+            font-weight: 400;
+            color: variables.$colorLetras;
+            cursor: pointer;
+            margin-bottom: 8px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .lista-canciones{
+            list-style-type: decimal;
+            flex: 0 0 220px;
+
+            & a{
+                @extend %texto-parrafo;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .tapa-año-titulo{
+        flex: 0 0 250px;
+    }
+
+    .album-info{
+        flex: 1;
+        min-width: 0; /*Importante para texto largo */
+    }
+}

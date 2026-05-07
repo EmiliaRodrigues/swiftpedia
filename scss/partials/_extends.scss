@@ -1,17 +1,20 @@
 @use './variables';
 
 /* EXTEND para títulos-pag*/
-%titulo-pag {
+%titulo-pagina {
+    font-family: variables.$letraSubTitulos;
+    font-weight: 900;
     text-align: center;
+    font-size: 3.5rem;
     color: variables.$colorLetras;
-    margin-top: 1%;
-    margin-bottom: 6%;
+    padding-top: 1%;
+    padding-bottom: 2%;
 }
 %sub-titulo {
     font-family: variables.$letraSubTitulos;
     font-weight: 700;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: variables.$colorLetras;
 }
 /* EXTEND para texto de párrafo */
@@ -19,6 +22,14 @@
     font-family: variables.$letraParrafos;
     font-weight: 400;
     font-style: normal;
+    color: variables.$colorLetras;
+}
+%texto-menu{
+    margin-right: 10%;
+    font-family: variables.$letraSubTitulos;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
     color: variables.$colorLetras;
 }
 /* MIXIN para margin responsive */
