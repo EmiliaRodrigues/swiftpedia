@@ -227,6 +227,7 @@ main .letra-cancion {
   background-color: #7D6B5A;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .container .fondo-card .card-body {
   flex-grow: 1;
@@ -234,6 +235,7 @@ main .letra-cancion {
 .container .fondo-card .card-body .title-size {
   font-size: 2rem;
   min-height: 100px;
+  word-wrap: break-word;
 }
 .container .fondo-card .card-body small {
   font-family: "Palanquin", sans-serif;
@@ -242,7 +244,9 @@ main .letra-cancion {
   list-style-position: inside;
   font-family: "Palanquin", sans-serif;
   max-height: 250px;
+  max-width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   padding: 0.75rem;
@@ -256,12 +260,15 @@ main .letra-cancion {
   margin-bottom: 0.4rem;
   color: #07082B;
   font-size: 0.9rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .container .fondo-card .card-body .lista-canciones a {
   color: #07082B;
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 500;
+  word-wrap: break-word;
 }
 
 footer {
@@ -327,6 +334,109 @@ footer .copy {
   text-align: center;
 }
 
+@media (max-width: 536px) {
+  header {
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: center;
+  }
+  header .titulo-sitio {
+    font-size: 3rem;
+    text-align: center;
+  }
+  header .subtitulo-sitio {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  header .menu-nav {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  header .menu-nav .lista-nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+  header .menu-nav .lista-nav .link-nav {
+    font-size: 1.2rem;
+  }
+  header .menu-nav .lista-nav .submenu {
+    position: absolute;
+    display: none;
+    background-color: #7D6B5A;
+    min-width: 200px;
+  }
+  header .menu-nav .lista-nav .submenu .link-submenu {
+    font-size: 1rem;
+    padding: 3px 10px;
+    color: #07082B;
+  }
+  header .menu-nav .lista-nav .item-nav:hover .submenu {
+    display: block;
+  }
+  main .imagen-portada {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    display: block;
+    padding: 0;
+  }
+  main .imagen-masters, main .imagen-chica, main .imagen-grammy {
+    float: none !important;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 8px;
+  }
+  main .subtitulo-pagina {
+    text-align: center;
+  }
+  .pagina-discografia .container-flex {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagina-discografia .container-flex .tapa-año-titulo {
+    flex: 0 0 100%;
+    width: 80%;
+  }
+  .pagina-discografia .container-flex details {
+    flex: 0 0 100%;
+  }
+  .pagina-discografia .container-flex .album-info {
+    flex: 0 0 100%;
+  }
+  .pagina-taylors-version .title-size {
+    min-height: auto;
+  }
+  .pagina-taylors-version .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 1rem;
+  }
+  .pagina-taylors-version .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .menu-footer {
+    margin-left: 0;
+    text-align: center;
+  }
+  .menu-footer .link-nav {
+    font-size: 1rem;
+  }
+  .copy {
+    font-size: 1rem;
+  }
+}
 body {
   background-color: #7D6B5A;
 }

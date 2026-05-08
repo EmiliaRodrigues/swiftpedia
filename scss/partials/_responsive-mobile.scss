@@ -1,0 +1,126 @@
+@use './variables';
+@use './extends';
+
+@media (max-width: 536px) {
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+        align-items: center;
+
+        .titulo-sitio {
+            font-size: 3rem;
+            text-align: center;  
+        }
+
+        .subtitulo-sitio {
+            font-size: 1.2rem;
+            text-align: center; 
+        }
+
+        .menu-nav {
+            @include extends.margenes(0,0,5%,0);
+            width: 100%;
+
+            .lista-nav {
+                flex-direction: column;
+                gap: 5px;
+
+                .link-nav {
+                    font-size: 1.2rem;
+                }
+
+                .submenu {
+                    position: absolute;
+                    display: none;
+                    background-color: variables.$colorSecundario;
+                    min-width: 200px;
+
+                    .link-submenu {
+                        font-size: 1rem;
+                        padding: 3px 10px;
+                        color: variables.$colorLetras;
+                    }
+                }
+
+                .item-nav:hover .submenu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    main {
+        .imagen-portada {
+            width: 90%;
+            height: 250px;
+            object-fit: cover;
+            margin: 0 auto 20px auto;
+            display: block;
+            padding: 0;
+        }
+
+        .imagen-masters,.imagen-chica,.imagen-grammy{
+            float: none !important;
+            width: 90%;
+            height: auto;
+            @include extends.margenes(auto, auto, 0, 20px);
+            display: block;
+            border-radius: 8px;
+        }
+        .subtitulo-pagina{
+            text-align: center;
+        }
+    }
+
+    .pagina-discografia{
+        .container-flex {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;     
+            justify-content: center;
+
+            .tapa-año-titulo {
+                flex: 0 0 100%;
+                width: 80%;
+            }
+
+            details {
+                flex: 0 0 100%;
+            }
+
+            .album-info {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    .pagina-taylors-version{
+        .title-size{
+            min-height: auto;
+        }
+
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            gap: 1rem;
+        }
+
+        .container {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+
+    .menu-footer{
+        margin-left: 0;
+        text-align: center;
+
+        .link-nav{
+            font-size: 1rem;
+        }
+    }
+
+    .copy{
+        font-size: 1rem;
+    }
+}
