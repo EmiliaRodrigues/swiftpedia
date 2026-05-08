@@ -384,7 +384,7 @@ footer .copy {
     width: 30%;
   }
 }
-@media (min-width: 536px) and (max-width: 900px) {
+@media (min-width: 584px) and (max-width: 900px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -456,7 +456,7 @@ footer .copy {
     margin-top: 10px;
   }
 }
-@media (max-width: 536px) {
+@media (max-width: 583px) {
   header {
     flex-direction: column;
     padding: 10px 15px;
@@ -540,8 +540,8 @@ footer .copy {
     min-height: auto;
   }
   .pagina-taylors-version .row {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     gap: 1rem;
   }
   .pagina-taylors-version .container {
@@ -550,7 +550,9 @@ footer .copy {
   }
   .menu-footer {
     margin-left: 0;
-    text-align: center;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .menu-footer .link-nav {
     font-size: 1rem;
@@ -561,6 +563,8 @@ footer .copy {
 }
 body {
   background-color: #7D6B5A;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

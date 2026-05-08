@@ -1,7 +1,7 @@
 @use './variables';
 @use './extends';
 
-@media (max-width: 536px) {
+@media (max-width: 583px) {
     header {
         flex-direction: column;
         padding: 10px 15px;
@@ -100,8 +100,8 @@
         }
 
         .row {
-            margin-left: 0 ;
-            margin-right: 0 ;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
             gap: 1rem;
         }
 
@@ -112,12 +112,12 @@
     }
 
     .menu-footer{
-        margin-left: 0;
-        text-align: center;
+        @include extends.margenes(0,0,auto,auto);
 
-        .link-nav{
-            font-size: 1rem;
-        }
+            .link-nav{
+                font-size: 1rem;
+
+            }
     }
 
     .copy{
