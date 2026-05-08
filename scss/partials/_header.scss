@@ -7,6 +7,8 @@ header {
     justify-content: space-between;
     padding: 15px 30px;
     background-color: variables.$colorSecundario;
+    margin-top: 0;
+    margin-bottom: 0; 
 
     .header-texto {
         display: flex;
@@ -18,6 +20,8 @@ header {
             font-style: normal;
             font-size: 4rem;
             color: variables.$colorLetras;
+            margin-top: 0;
+        margin-bottom: 0;   
         }
 
         .subtitulo-sitio {
@@ -26,6 +30,8 @@ header {
             font-style: normal;
             font-size: 1.5rem;
             color: variables.$colorLetras;
+            margin-top: 0;
+            margin-bottom: 0; 
         }
     }
 

@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+header {
+  all: revert;
+}
+
+header * {
+  all: revert;
+}
+
 /* EXTEND para títulos-pag*/
 main .titulo-pagina, main .titulo-cancion {
   font-family: "Abhaya Libre", serif;
@@ -50,6 +58,8 @@ header {
   justify-content: space-between;
   padding: 15px 30px;
   background-color: #7D6B5A;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 header .header-texto {
   display: flex;
@@ -61,6 +71,8 @@ header .header-texto .titulo-sitio {
   font-style: normal;
   font-size: 4rem;
   color: #07082B;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 header .header-texto .subtitulo-sitio {
   font-family: "Abhaya Libre", serif;
@@ -68,6 +80,8 @@ header .header-texto .subtitulo-sitio {
   font-style: normal;
   font-size: 1.5rem;
   color: #07082B;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 header .menu-nav .lista-nav {
   display: flex;
@@ -312,6 +326,7 @@ footer .menu-footer {
   align-items: center;
   justify-content: center;
   margin-top: 5%;
+  margin-bottom: 3%;
 }
 footer .menu-footer .menu-nav .lista-nav {
   display: flex;
@@ -334,6 +349,113 @@ footer .copy {
   text-align: center;
 }
 
+@media (min-width: 901px) and (max-width: 1030px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  header .subtitulo-sitio {
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  header .menu-nav {
+    margin-right: 2%;
+  }
+  header .menu-nav .lista-nav {
+    gap: 15px;
+    font-size: 1.5rem;
+  }
+  main .imagen-portada {
+    width: 80%;
+    justify-items: center;
+    height: 10%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    border-radius: 8px;
+    padding: 0;
+  }
+  main .imagen-grammy, main .imagen-chica {
+    width: 30%;
+  }
+}
+@media (min-width: 536px) and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .titulo-sitio {
+    font-size: 3.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  header .subtitulo-sitio {
+    font-size: 1.3rem;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  header .menu-nav {
+    margin-right: 0;
+  }
+  header .menu-nav .lista-nav {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  header .menu-nav .lista-nav .item-nav:nth-child(4) .submenu, header .menu-nav .lista-nav .item-nav:nth-child(5) .submenu {
+    left: auto;
+    right: 0;
+  }
+  header .menu-nav .lista-nav .item-submenu {
+    font-size: 1.3rem;
+    margin-right: 2%;
+  }
+  main .imagen-portada {
+    width: 90%;
+    justify-items: center;
+    height: 10%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    border-radius: 8px;
+    padding: 0;
+  }
+  main .imagen-grammy, main .imagen-chica {
+    width: 40%;
+  }
+  main .imagen-masters {
+    width: 50%;
+  }
+  .pagina-discografia .container-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .pagina-discografia .container-flex .tapa-año-titulo {
+    flex: 0 0 100%;
+  }
+  .pagina-discografia .container-flex .tapa-año-titulo .tapa-album {
+    width: 40%;
+  }
+  .pagina-discografia .container-flex details {
+    flex: 0 0 auto;
+  }
+  .pagina-discografia .container-flex .album-info {
+    flex: 0 0 100%;
+    margin-top: 10px;
+  }
+}
 @media (max-width: 536px) {
   header {
     flex-direction: column;
@@ -418,8 +540,8 @@ footer .copy {
     min-height: auto;
   }
   .pagina-taylors-version .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
     gap: 1rem;
   }
   .pagina-taylors-version .container {

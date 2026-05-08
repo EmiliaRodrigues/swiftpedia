@@ -1,3 +1,93 @@
 @media  (min-width: 536px) and (max-width: 900px)  {
+    header {
+        flex-direction: column;
+        align-items: center;
 
+        .titulo-sitio {
+            font-size: 3.5rem;
+            align-items: center;
+            text-align: center; 
+        }
+
+        .subtitulo-sitio {
+            font-size: 1.3rem;
+            align-items: center;
+            text-align: center; 
+            margin-bottom: 2%;
+        }
+
+        .menu-nav {
+            margin-right: 0;
+
+            .lista-nav {
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 12px;
+                font-size: 1.4rem;
+                margin-bottom: 0;
+
+                .item-nav:nth-child(4) .submenu, .item-nav:nth-child(5) .submenu {
+                    left: auto;
+                    right: 0;
+                }
+
+                .item-submenu{
+                    font-size: 1.3rem;
+                    margin-right: 2%;
+                }
+            }
+
+
+        }
+
+    }
+
+    main{
+        .imagen-portada {
+            width: 90%;
+            justify-items: center;
+            height: 10%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4%;
+            border-radius: 8px;
+            padding: 0;
+        }
+
+        .imagen-grammy,.imagen-chica{
+            width: 40%;
+        }
+
+        .imagen-masters{
+            width: 50%;
+        }
+    }
+
+    .pagina-discografia{
+        .container-flex {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+
+            .tapa-año-titulo {
+                flex: 0 0 100%;
+
+                .tapa-album{
+                    width: 40%;
+                }
+            }
+
+            details {
+                flex: 0 0 auto;  
+            }
+
+            .album-info {
+                flex: 0 0 100%;
+                margin-top: 10px;
+            }
+        }
+    }
 }
