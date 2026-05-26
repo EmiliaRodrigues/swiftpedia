@@ -418,6 +418,10 @@ footer .copy {
     font-size: 1.3rem;
     margin-right: 2%;
   }
+  header .menu-nav .item-nav:hover .submenu,
+  header .menu-nav .item-nav:focus-within .submenu {
+    display: block;
+  }
   main .imagen-portada {
     width: 90%;
     justify-items: center;
@@ -496,6 +500,10 @@ footer .copy {
     color: #07082B;
   }
   header .menu-nav .lista-nav .item-nav:hover .submenu {
+    display: block;
+  }
+  header .menu-nav .lista-nav .item-nav:hover .submenu,
+  header .menu-nav .lista-nav .item-nav:focus-within .submenu {
     display: block;
   }
   main .imagen-portada {

@@ -45,6 +45,11 @@
                 .item-nav:hover .submenu {
                     display: block;
                 }
+
+                .item-nav:hover .submenu,
+                .item-nav:focus-within .submenu {
+                    display: block;
+                }
             }
         }
     }
@@ -116,7 +121,6 @@
 
             .link-nav{
                 font-size: 1rem;
-
             }
     }
 
