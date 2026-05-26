@@ -7,14 +7,21 @@
         padding: 10px 15px;
         align-items: center;
 
-        .titulo-sitio {
-            font-size: 3rem;
-            text-align: center;  
-        }
+        .header-texto {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+            .titulo-sitio {
+                font-size: 2.8rem;
+                text-align: center;  
+                word-wrap: break-word;
+            }
 
-        .subtitulo-sitio {
-            font-size: 1.2rem;
-            text-align: center; 
+            .subtitulo-sitio {
+                font-size: 1.2rem;
+                text-align: center; 
+                word-wrap: break-word;
+            }
         }
 
         .menu-nav {
@@ -111,17 +118,45 @@
         }
 
         .container {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+            
+            padding-left: 0rem !important; 
+            padding-right: 0rem !important;
+        }
+
+        .col-12, .col-md-6, .col-lg-5 {
+            padding-left: 0.5rem !important;  
+            padding-right: 0.5rem !important;
         }
     }
 
-    .menu-footer{
-        @include extends.margenes(0,0,auto,auto);
+    .menu-footer {
+        @include extends.margenes(0, 0, auto, auto);
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
 
-            .link-nav{
-                font-size: 1rem;
-            }
+        .menu-nav {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        .menu-nav .lista-nav {
+            flex-wrap: wrap;
+            gap: 8px !important;  // ← Reducir gap
+            justify-content: center;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .menu-nav .lista-nav .item-nav {
+            white-space: nowrap;
+            font-size: 0.9rem !important;  // ← Reducir tamaño
+        }
+
+        .link-nav {
+            font-size: 1rem;
+            padding: 0 5px;  // ← Reducir padding
+        }
     }
 
     .copy{

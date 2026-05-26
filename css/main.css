@@ -31,6 +31,8 @@ footer h2, .container .fondo-card .card-body .title-size, main .subtitulo-pagina
   font-style: normal;
   font-size: 2.5rem;
   color: #07082B;
+  padding-bottom: 1%;
+  padding-top: 2%;
 }
 
 /* EXTEND para texto de párrafo */
@@ -318,9 +320,18 @@ footer .contact-form button {
   padding: 0.5%;
   border-radius: 10px;
   margin-top: 2%;
+  cursor: pointer;
+  background: linear-gradient(90deg, #BCBAAD, #BCBAAD);
+  transition: all 0.6s ease;
+}
+footer .contact-form button:hover {
+  background: linear-gradient(90deg, #b7ada2, #7D6B5A);
+  box-shadow: 0 4px 15px rgba(230, 240, 50, 0.4);
 }
 footer .contact-form button:active {
-  background-color: #7D6B5A;
+  background: linear-gradient(90deg, #b7ada2, #7D6B5A);
+  transform: scale(0.98);
+  box-shadow: 0 4px 15px rgba(230, 240, 50, 0.4);
 }
 footer .menu-footer {
   align-items: center;
@@ -466,13 +477,20 @@ footer .copy {
     padding: 10px 15px;
     align-items: center;
   }
-  header .titulo-sitio {
-    font-size: 3rem;
-    text-align: center;
+  header .header-texto {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
-  header .subtitulo-sitio {
+  header .header-texto .titulo-sitio {
+    font-size: 2.8rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  header .header-texto .subtitulo-sitio {
     font-size: 1.2rem;
     text-align: center;
+    word-wrap: break-word;
   }
   header .menu-nav {
     margin-left: 0;
@@ -553,17 +571,40 @@ footer .copy {
     gap: 1rem;
   }
   .pagina-taylors-version .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+  .pagina-taylors-version .col-12, .pagina-taylors-version .col-md-6, .pagina-taylors-version .col-lg-5 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   .menu-footer {
     margin-left: 0;
     margin-right: 0;
     margin-top: auto;
     margin-bottom: auto;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .menu-footer .menu-nav {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .menu-footer .menu-nav .lista-nav {
+    flex-wrap: wrap;
+    gap: 8px !important;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .menu-footer .menu-nav .lista-nav .item-nav {
+    white-space: nowrap;
+    font-size: 0.9rem !important;
   }
   .menu-footer .link-nav {
     font-size: 1rem;
+    padding: 0 5px;
   }
   .copy {
     font-size: 1rem;
@@ -571,7 +612,6 @@ footer .copy {
 }
 body {
   background-color: #7D6B5A;
-  overflow-x: hidden;
   max-width: 100%;
 }
 

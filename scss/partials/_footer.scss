@@ -34,9 +34,19 @@ footer{
             padding: 0.5%;
             border-radius: 10px;
             margin-top: 2%;
+            cursor: pointer;
+            background: linear-gradient(90deg, #BCBAAD, #BCBAAD);
+            transition: all 0.6s ease;
+            
+            &:hover {
+                background: linear-gradient(90deg, #b7ada2, #7D6B5A);
+                box-shadow: 0 4px 15px rgba(230, 240, 50, 0.4);
+            }
 
             &:active{
-                background-color: variables.$colorSecundario;
+                background: linear-gradient(90deg, #b7ada2, #7D6B5A);
+                transform: scale(0.98);
+                box-shadow: 0 4px 15px rgba(230, 240, 50, 0.4);
             }
         }
     }
